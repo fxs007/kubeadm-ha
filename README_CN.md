@@ -698,11 +698,13 @@ $ vi /etc/kubernetes/manifests/kube-apiserver.yaml
 $ systemctl restart docker && systemctl restart kubelet
 ```
 
+```
 $ kubectl get ep
-NAME         ENDPOINTS                             AGE
-kubernetes   10.74.68.151:6443,10.74.68.153:6443   2d
+NAME         ENDPOINTS                                               AGE
+kubernetes   10.74.68.135:9443,10.74.68.137:9443,10.74.68.134:9443   2d
+```
 
-Without this step, apiservers keep overwriting each other in the above ep in etcd.
+Without this step, apiservers keep overwriting the above ep in etcd.
 
 * 在devops-master01上检查高可用状态
 
