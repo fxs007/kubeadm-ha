@@ -696,9 +696,7 @@ $ vi /etc/kubernetes/manifests/kube-apiserver.yaml
 
 # 重启服务
 $ systemctl restart docker && systemctl restart kubelet
-```
 
-```
 $ kubectl get ep
 NAME         ENDPOINTS                                               AGE
 kubernetes   10.74.68.135:9443,10.74.68.137:9443,10.74.68.134:9443   2d
